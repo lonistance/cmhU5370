@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+<head>
+	
+<meta charset="utf-8">
+<title>图鉴</title>
+</head>
+<style> 
+ body{
+   background:url("../image/背景图3.jpg")  no-repeat center center;   /*加载背景图*/   /* 背景图不平铺 */
+   background-size:cover;  /* 让背景图基于容器大小伸缩 */
+   background-attachment:fixed;        /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */    /*此条属性必须设置否则可能无效*/
+   background-color:#CCCCCC;   /* 设置背景颜色，背景图加载过程中会显示背景色 */
+ }
+ h2{
+	color: rgb(211, 207, 207);
+	align-self: center;
+ }
+</style>
+
+<style>
+	.con {
+    position: relative;
+}
+.nav > li {
+    display: inline;
+    float:left;
+}
+.nav li a {
+    color: #FFFF0F;
+    display: block;
+    line-height: 20px;
+    padding: 15px 30px 15px 180px;
+}
+.con:hover {
+    cursor: pointer;
+}
+.con:hover .con-box{
+     transform: translateZ(-25px) rotateX(90deg);
+}
+.con-box {
+     transition: all .3s ease-out;
+    transform: translatez(-25px);
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.cont {
+    transform: rotatex(0deg) translatez(25px);
+}
+.back {
+    transform: rotatex(-90deg) translatez(25px);
+    color: #BD06DE;
+}
+.cont, .back {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #2B98EF;  
+    padding: 15px 30px 15px 31px;
+    color: white;
+    box-sizing: border-box;
+}
+.nav li a:hover .cont,  
+.nav li a:hover .back {
+    background-color: #05F3FF;
+}
+
+	</style>
+ <style>
+.p {
+	font-family: Lisu;
+}
+		body{ background-color:#c28889;}
+	.lanren{width:1000px;overflow:hidden;margin:0 auto;}
+	.flip-3d { 
+	  perspective: 1200px; width: 25%; float: left;  
+	}
+	.flip-3d figure { 
+	  position: relative; 
+	  transform-style: preserve-3d; 
+	  transition: 1s transform;
+	  font-size: 1.6rem;
+	  margin:25px;
+	}
+	.flip-3d figure img { 
+	  width: 100%; height: auto; 
+	}
+	.flip-3d figure figcaption { 
+	  position: absolute; 
+	  width: 100%; height: 100%; top: 0; 
+	  transform: rotateY(.5turn) translateZ(1px); 
+	  background: rgba(255,255,255,0.9); 
+	  text-align: center; 
+	  padding-top: 5%; 
+	  opacity: 0.6; 
+	  transition: 1s .5s opacity; 
+	}
+	.flip-3d:hover figure { transform: rotateY(.5turn); }
+	.flip-3d:hover figure figcaption { opacity: 1; }
+	.flip-3d figure:after { 
+	  content: " "; display: block;
+	  height: 8vw; width: 100%; 
+	  transform: rotateX(90deg); 
+	  background-image:radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%); 
+	}
+	@media screen and (max-width: 800px) { 
+	  #flip-3d { perspective-origin: center top; }
+		div#flip-3d figure { 
+	    float: none; 
+	    width: 50%; 
+	    margin: 0 auto; 
+	    margin-bottom: 12vw; 
+	  }
+	 .flip-3d figure figcaption{font-size: 0.8rem;}
+		div#flip-3d figure:last-child { display: none; }
+	}
+	
+	</style>
+<body>
+	
+<div>	
+ <ul class="nav">
+    <li><a href="index.html" class="con"> odddd <span class="con-box"><span class="cont">返回主页面</span><span class="back">《山海》异志</span>
+    </span> </a></li>
+    <li><a href="../web/阅读.html" class="con"> two <span class="con-box"><span class="cont">返回阅读</span><span class="back">阅读</span></span> </a></li>
+    <li><a href="../web/索引.html" class="con"> tree <span class="con-box"><span class="cont">返回索引</span><span class="back">索引</span></span> </a></li>    
+	<li><a href="../web/引导页面.html" class="con"> free <span class="con-box"><span class="cont">梦开始的地方</span><span class="back">《山海经》</span></span> </a></li>
+	<li><a href="" class="con"> free <span class="con-box"><span class="cont">看完了</span><span class="back">返回寝室页面</span></span> </a></li>
+</ul>
+</div>
+<div class="flip-3d">
+			<figure>
+	    	  <img src="../image/p1.jpg" alt="">
+		    	<figcaption><a href="index.html"></a></figcaption>
+		  	</figure>
+		</div>
+<div class="flip-3d">
+			<figure>
+	    	  <img src="../image/p2.jpg" alt="">
+		    	<figcaption><a href="index.html"></a></figcaption>
+		  	</figure>
+		</div>
+<div class="flip-3d">
+			<figure>
+	    	  <img src="../image/p3.jpg" alt="">
+		    	<figcaption><a href="index.html"></a></figcaption>
+		  	</figure>
+		</div>
+<div class="flip-3d">
+			<figure>
+	    	  <img src="../image/p4.jpg" alt="">
+		    	<figcaption><a href="index.html"></a></figcaption>
+		  	</figure>
+		</div>
+<div class="flip-3d">
+			<figure>
+	    	  <img src="../image/p5.jpg" alt="">
+		    	<figcaption><a href="index.html"></a></figcaption>
+		  	</figure>
+		</div>
+<div class="flip-3d">
+			<figure>
+	    	  <img src="../image/p6.jpg" alt="">
+		    	<figcaption><a href="index.html"></a></figcaption>
+		  	</figure>
+		</div>
+<div class="flip-3d">
+			<figure>
+	    	  <img src="../image/p7.jpg" alt="">
+		    	<figcaption><a href="index.html"></a></figcaption>
+		  	</figure>
+		</div>
+<div class="flip-3d">
+			<figure>
+	    	  <img src="../image/p8.jpg" alt="">
+		    	<figcaption><a href="index.html"></a></figcaption>
+		  	</figure>
+		</div>
+</body>
+</html>
